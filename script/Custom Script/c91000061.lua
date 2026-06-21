@@ -1,9 +1,5 @@
-if op==0 then
-	if not c:IsRelateToEffect(e) then return end
-	if Duel.GetLocationCount(tp,LOCATION_MZONE)<=0 then return end
-
-	if not Duel.SpecialSummonStep(c,0,tp,tp,true,false,POS_FACEUP) then return end
-
+local s,id=GetID()
+function s.initial_effect(c)
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
 	e1:SetCode(EFFECT_CHANGE_TYPE)
